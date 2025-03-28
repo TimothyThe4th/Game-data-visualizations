@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ game.name }}</h1>
+<p>Platform: {{ game.platform }}</p>
+<p>Release Year: {{ game.year }}</p>
+<p>Genre: {{ game.genre }}</p>
+<p>Publisher: {{ game.publisher }}</p>
+<p>NA_sales: {{ game.na_sales }}</p>
+<p>EU_sales: {{ game.eu_sales }}</p>
+<p>JP_sales: {{ game.jp_sales }}</p>
+<p>Other_sales: {{ game.other_sales }}</p>
+<p>Global_Sales: {{ game.global_sales }}</p>
+{% endblock %}

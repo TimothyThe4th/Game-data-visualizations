@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Game List</h1>
+<form action="{{ url_for('search') }}" method="get">
+    <input type="text" name="query" placeholder="Search for games...">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for game in games %}
+    <li><a href="{{ url_for('game', game_id=game.id) }}">{{ game.name }}</a></li>
+    {% endfor %}
+</ul>
+<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Upload CSV</button>
+</form>
+{% endblock %}

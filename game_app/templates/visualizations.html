@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Visualizations</h1>
+<div>
+    <h2>Game Releases by Year</h2>
+    {{ release_histogram|safe }}
+</div>
+<div>
+    <h2>Game Popularity by Genre</h2>
+    {{ genre_bar_chart|safe }}
+</div>
+{% endblock %}
